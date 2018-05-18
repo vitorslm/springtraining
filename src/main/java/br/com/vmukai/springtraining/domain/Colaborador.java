@@ -21,7 +21,6 @@ public class Colaborador {
     @Column(name = "email")
     private String email;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "colaborador")
     private List<Sugestao> sugestaoList = new ArrayList<>();
 

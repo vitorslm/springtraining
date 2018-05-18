@@ -1,8 +1,12 @@
 package br.com.vmukai.springtraining.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity(name = "sugestao")
@@ -17,9 +21,12 @@ public class Sugestao {
     private String conteudo;
 
     @Column(name = "data_sugestao")
-    private Date data;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate data;
 
+    @JsonIgnore
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private Colaborador colaborador = new Colaborador();
 
 }
