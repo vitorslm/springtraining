@@ -16,7 +16,7 @@ public class ColaboradorService {
     private ColaboradorRepository repository;
 
     public List<Colaborador> findAll(){
-        return findAll();
+        return repository.findAll();
     }
 
     public Colaborador findById(Long id) throws NoSuchElementException{
