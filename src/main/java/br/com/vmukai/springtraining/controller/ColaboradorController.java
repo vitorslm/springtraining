@@ -37,6 +37,12 @@ public class ColaboradorController {
         return ResponseEntity.ok().build();
     }
 
+    @PatchMapping(value = "/{id}")
+    public ResponseEntity<Void> updateVarible(@PathVariable Long id,@RequestBody Colaborador colaborador){
+        service.updateVariable(id, colaborador);
+        return ResponseEntity.ok().build();
+    }
+
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
         service.delete(id);

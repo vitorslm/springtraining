@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface ColaboradorRepository extends JpaRepository<Colaborador, Long> {
 
     Optional<Colaborador> findByNome(String nome);
+
 }
