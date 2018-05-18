@@ -1,7 +1,7 @@
-package br.com.vmukai.springtraining.Service;
+package br.com.vmukai.springtraining.service;
 
-import br.com.vmukai.springtraining.Domain.Sugestao;
-import br.com.vmukai.springtraining.Repository.SugestaoRepository;
+import br.com.vmukai.springtraining.domain.Sugestao;
+import br.com.vmukai.springtraining.repository.SugestaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

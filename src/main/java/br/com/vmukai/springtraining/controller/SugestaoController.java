@@ -1,7 +1,7 @@
-package br.com.vmukai.springtraining.Controller;
+package br.com.vmukai.springtraining.controller;
 
-import br.com.vmukai.springtraining.Domain.Sugestao;
-import br.com.vmukai.springtraining.Service.SugestaoService;
+import br.com.vmukai.springtraining.domain.Sugestao;
+import br.com.vmukai.springtraining.service.SugestaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

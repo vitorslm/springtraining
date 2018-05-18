@@ -1,7 +1,7 @@
-package br.com.vmukai.springtraining.Service;
+package br.com.vmukai.springtraining.service;
 
-import br.com.vmukai.springtraining.Domain.Colaborador;
-import br.com.vmukai.springtraining.Repository.ColaboradorRepository;
+import br.com.vmukai.springtraining.domain.Colaborador;
+import br.com.vmukai.springtraining.repository.ColaboradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,9 @@
-package br.com.vmukai.springtraining.Controller;
+package br.com.vmukai.springtraining.controller;
 
-import br.com.vmukai.springtraining.Domain.Colaborador;
-import br.com.vmukai.springtraining.Service.ColaboradorService;
+import br.com.vmukai.springtraining.domain.Colaborador;
+import br.com.vmukai.springtraining.service.ColaboradorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

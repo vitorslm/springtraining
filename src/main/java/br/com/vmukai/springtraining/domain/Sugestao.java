@@ -1,4 +1,4 @@
-package br.com.vmukai.springtraining.Domain;
+package br.com.vmukai.springtraining.domain;
 
 import lombok.Data;
 
