@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity(name = "colaborador")
 @Data
+
 public class Colaborador implements Serializable {
     private static final long serialVersionUID = 1L;
 

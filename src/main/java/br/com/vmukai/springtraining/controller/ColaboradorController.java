@@ -1,5 +1,6 @@
 package br.com.vmukai.springtraining.controller;
 
+import br.com.vmukai.springtraining.VO.ColaboradorVO;
 import br.com.vmukai.springtraining.domain.Colaborador;
 import br.com.vmukai.springtraining.service.ColaboradorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/colaborador")
@@ -16,12 +18,14 @@ public class ColaboradorController {
     private ColaboradorService service;
 
     @GetMapping(value = "/")
-    public ResponseEntity<List<Colaborador>> findAll(){
-        return ResponseEntity.ok().body(service.findAll());
+    public ResponseEntity<List<ColaboradorVO>> findAll(){
+        List<Colaborador> list = service.findAll();
+        List<ColaboradorVO> listVo = list.stream().map(obj -> new ColaboradorVO(obj)).collect(Collectors.toList());
+        return ResponseEntity.ok().body(listVo);
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Colaborador> find(@PathVariable Long id){
+    public ResponseEntity<Colaborador> findById(@PathVariable Long id){
         return ResponseEntity.ok().body(service.findById(id));
     }
 
