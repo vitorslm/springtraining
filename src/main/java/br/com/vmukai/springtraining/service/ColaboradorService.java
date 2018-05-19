@@ -5,6 +5,7 @@ import br.com.vmukai.springtraining.repository.ColaboradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.NamedQuery;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -42,13 +43,11 @@ public class ColaboradorService {
 
     public void updateVariable(Long id, Colaborador colaborador){
         Optional<Colaborador> co = repository.findById(id);
-        for(Field f : Colaborador.class.getDeclaredFields()){
             if(colaborador.getEmail() == null){
                 co.get().setNome(colaborador.getNome());
                 colaborador.setEmail(co.get().getEmail());
-            }
+            repository.save(colaborador);
         }
-        repository.save(colaborador);
     }
 
     public void delete(Long id){
